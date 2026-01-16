@@ -137,7 +137,7 @@
         
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 8px 16px rgba(102, 125, 234, 0.3);
         }
         
         .btn-secondary {
@@ -156,7 +156,7 @@
         }
         
         .btn-danger:hover {
-            background: #dc2626;
+            background: #dc2525;
         }
         
         .input-field {
@@ -171,7 +171,7 @@
         .input-field:focus {
             outline: none;
             border-color: var(--accent-primary);
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            box-shadow: 0 0 0 3px rgba(102, 125, 234, 0.1);
         }
         
         .label {
@@ -225,7 +225,7 @@
         
         .nav-tab {
             padding: 14px 28px;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            background: linear-gradient(135deg, rgba(102, 125, 234, 0.1), rgba(118, 75, 162, 0.1));
             border: 2px solid transparent;
             border-radius: 12px;
             font-weight: 700;
@@ -237,16 +237,16 @@
         }
         
         .nav-tab:hover {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+            background: linear-gradient(135deg, rgba(102, 125, 234, 0.2), rgba(118, 75, 162, 0.2));
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 4px 12px rgba(102, 125, 234, 0.3);
         }
         
         .nav-tab.active {
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
             border-color: var(--accent-primary);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 6px 20px rgba(102, 125, 234, 0.4);
             transform: translateY(-2px);
         }
         
@@ -334,7 +334,7 @@
         }
         
         .spinner {
-            border: 3px solid rgba(102, 126, 234, 0.3);
+            border: 3px solid rgba(102, 125, 234, 0.3);
             border-radius: 50%;
             border-top-color: var(--accent-primary);
             width: 40px;
@@ -379,7 +379,7 @@
         }
         
         .checkbox-item.active {
-            background: rgba(102, 126, 234, 0.1);
+            background: rgba(102, 125, 234, 0.1);
             border-color: var(--accent-primary);
         }
         
@@ -447,12 +447,12 @@
         }
 
         .target-box {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+            background: linear-gradient(135deg, rgba(102, 125, 234, 0.15), rgba(118, 75, 162, 0.15));
             padding: 20px;
             border-radius: 12px;
             margin-bottom: 24px;
             border: 2px solid var(--accent-primary);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 4px 12px rgba(102, 125, 234, 0.2);
         }
         
         .odt-exceed-warning {
@@ -530,7 +530,7 @@
             }
             
             .chart-container {
-                height: 260px;
+                height: 250px;
             }
             
             table {
@@ -886,8 +886,8 @@
         // STATE & CONSTANTS
         // =============================================
         const defaultConfig = {
-            system_title: "OEE Digital Monitoring",
-            company_name: "Your Company"
+            system_title: "OEE Monitoring System PT. GOF",
+            company_name: "Created by MSTD GOF"
         };
 
         let currentPage = 'dashboard';
@@ -922,11 +922,11 @@
             const date = new Date();
             const currentDay = date.getDate();
             
-            if (currentDay < 27) {
+            if (currentDay < 26) {
                 date.setMonth(date.getMonth() - 1);
-                date.setDate(27);
+                date.setDate(26);
             } else {
-                date.setDate(27);
+                date.setDate(26);
             }
             
             return date.toISOString().split('T')[0];
@@ -936,11 +936,11 @@
             const date = new Date();
             const currentDay = date.getDate();
             
-            if (currentDay < 27) {
-                date.setDate(26);
+            if (currentDay < 26) {
+                date.setDate(25);
             } else {
                 date.setMonth(date.getMonth() + 1);
-                date.setDate(26);
+                date.setDate(25);
             }
             
             return date.toISOString().split('T')[0];
@@ -2001,7 +2001,7 @@
                             label: 'OEE Actual',
                             data,
                             borderColor: '#667eea',
-                            backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                            backgroundColor: 'rgba(102, 125, 234, 0.1)',
                             tension: 0.4,
                             fill: true,
                             pointBackgroundColor: pointColors,
@@ -2560,7 +2560,7 @@
             if (!container) return;
             
             const html = `
-                <div id="custom-lsm-${customLSMCounter}" style="background: rgba(102, 126, 234, 0.1); padding: 12px; border-radius: 8px; margin-top: 12px; border: 2px solid var(--accent-primary);">
+                <div id="custom-lsm-${customLSMCounter}" style="background: rgba(102, 125, 234, 0.1); padding: 12px; border-radius: 8px; margin-top: 12px; border: 2px solid var(--accent-primary);">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
                         <strong style="color: var(--accent-primary);">Custom Line Stop Mesin #${customLSMCounter}</strong>
                         <button type="button" class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;" onclick="removeCustomLSM(${customLSMCounter})">Remove</button>
@@ -3629,7 +3629,7 @@
                     head: [['Date', 'Shift', 'Machine', 'PIC', 'Product', 'Batch', 'Output', 'Reject', 'A%', 'P%', 'Q%', 'OEE Act', 'OEE 365']],
                     body: tableData,
                     styles: { fontSize: 7, cellPadding: 2 },
-                    headStyles: { fillColor: [102, 126, 234], fontStyle: 'bold' },
+                    headStyles: { fillColor: [102, 125, 234], fontStyle: 'bold' },
                     alternateRowStyles: { fillColor: [245, 247, 250] },
                     margin: { left: 14, right: 14 },
                     didDrawPage: function (data) {
